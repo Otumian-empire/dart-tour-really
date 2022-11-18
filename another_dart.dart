@@ -16,15 +16,15 @@ num add2({num x = 0, num y = 0}) {
 }
 
 class Programmer {
-  String? fullName;
-  String? title;
-  num? salary;
+  String fullName;
+  String title;
+  num salary;
 
   Programmer({this.fullName, this.salary, this.title});
 
-  String? getFullName() => this.fullName;
-  String? getTitle() => this.title;
-  num? getSalary() => this.salary;
+  String getFullName() => this.fullName;
+  String getTitle() => this.title;
+  num getSalary() => this.salary;
 
   void display() {
     print("Full Name: ${this.getFullName()}");
