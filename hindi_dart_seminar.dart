@@ -214,34 +214,143 @@ import 'dart:io';
 // }
 
 // function
-void main(List<String> args) {
-  // type name (parameter) { do something' return something; }
-  // type name (params) => something;
+// void main(List<String> args) {
+// type name (parameter) { do something' return something; }
+// type name (params) => something;
 
-  // named and positional params/args
-  /* // positional
+// named and positional params/args
+/* // positional
     type name (var a, var b) { 
       do something' return something;
     } 
   */
-  // a is in the first position and b is in the next
-  // name(va, vb) => va->a, vb->b
+// a is in the first position and b is in the next
+// name(va, vb) => va->a, vb->b
 
-  /* // named
+/* // named
     type name ({var a, var b}) { 
       do something' return something;
     } 
   */
-  // even if a is in the first position and b is in the next
-  // the order doesn't matter. what is needed is the name
-  // name(a: va, b: bv) or name(b: vb, a: va)
+// even if a is in the first position and b is in the next
+// the order doesn't matter. what is needed is the name
+// name(a: va, b: bv) or name(b: vb, a: va)
 
-  // in case of named params, they are optional and it should just work
-  // fine if the name param is not provided. however it should be handle
-  // since that param might be used namedParam??SOME_DEFAULT_VALUE or
-  // just do the default assignment in the param definition
-  // type name ({var a=DEF_VAL_A, var b=DEF_VAL_B}){};
-}
+// in case of named params, they are optional and it should just work
+// fine if the name param is not provided. however it should be handle
+// since that param might be used namedParam??SOME_DEFAULT_VALUE or
+// just do the default assignment in the param definition
+// type name ({var a=DEF_VAL_A, var b=DEF_VAL_B}){};
+// }
 
 // class
+void main(List<String> args) {
+  // use a class to defined a custom type (blue) for/of an object
+  /* var dog = Animal();
+  dog.age = 1;
+  dog.name = "Blue";
+  dog.printAnimal(); */
+
+  /* var dog = AnimalWithConstructor("Blue",1);
+  dog.printAnimal(); */
+
+  /* var dog = AnimalWithConstructorAndDefaultValue("Blue");
+  dog.printAnimal(); */
+
+  /* var dog = AnimalWithNamedConstructor.otherAnimal();
+  dog.printAnimal(); */
+
+  /* var mammal = Mammal("Derrick", 3000, true);
+  mammal.printAnimal();
+
+  var doggo = Mammal("Frank Cake", 2, true);
+  doggo.printAnimal(); */
+}
+/* 
+class Animal {
+  String name;
+  int age;
+
+  void printAnimal() {
+    print("Name: $name");
+    print("Age: $age");
+  }
+}
+
+class Mammal extends Animal {
+  bool hasFur;
+
+  Mammal(var name, var age,
+      this.hasFur) /* : super(pass the arguments for the super class) */ {
+    super.age = age;
+    super.name = name;
+  }
+
+  void printAnimal() {
+    super.printAnimal();
+    print("This is a mammal: $hasFur");
+  }
+}
+
+class Dog extends Mammal {
+  Dog(var name, var age, var hasFur) : super(name, age, hasFur);
+
+  void set name(var value) => name = value;
+  // set name(var value) => name = value;
+  String get name => name;
+}
+
+class AnimalWithConstructor {
+  String name;
+  int age;
+
+  // since the parameters and the fields have the same name, the constructor can be replaced with
+  // AnimalWithConstructor(this.name, this.age);
+  AnimalWithConstructor(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  void printAnimal() {
+    print("Name: $name");
+    print("Age: $age");
+  }
+}
+
+class AnimalWithConstructorAndDefaultValue {
+  String name;
+  int age;
+
+  // same here, we can replace the constructor header
+  // AnimalWithConstructorAndDefaultValue(this.name, [this.age=1])
+  AnimalWithConstructorAndDefaultValue(String name, [int age = 1]) {
+    this.name = name;
+    this.age = age;
+  }
+
+  void printAnimal() {
+    print("Name: $name");
+    print("Age: $age");
+  }
+}
+
+class AnimalWithNamedConstructor {
+  String name;
+  int age;
+
+  AnimalWithNamedConstructor(this.name, [this.age = 1]);
+
+  AnimalWithNamedConstructor.otherAnimal() {
+    this.name = "Some random Animal";
+    this.age = 0;
+  }
+
+  void printAnimal() {
+    print("Name: $name");
+    print("Age: $age");
+  }
+}
+
+*/
+
 // exception handling
