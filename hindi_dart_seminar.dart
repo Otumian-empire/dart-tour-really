@@ -125,96 +125,123 @@ import 'dart:io';
   var anything = 1;
 } */
 
-
 // loops
 // collections: list, set, map
 // void main(List<String> args) {
-  // standard for loop
-  // for (int i = 0; i < someVal; i++) { do this }
-  // for (var i in collection) { do something with i }
-  // collection.forEach((item)=> do something)
-  // collection.forEach((item) { do something })
+// standard for loop
+// for (int i = 0; i < someVal; i++) { do this }
+// for (var i in collection) { do something with i }
+// collection.forEach((item)=> do something)
+// collection.forEach((item) { do something })
 
-  // while (cond holds) { do something }
-  // we can use break and continue in loops
+// while (cond holds) { do something }
+// we can use break and continue in loops
 
-  // List
-  // List users = ["tommyC", "bobPy", "anthonyR"];
-  // List <String> users = ["tommyC", "bobPy", "anthonyR"];
-  // var users = ["tommyC", "bobPy", "anthonyR"];
-  // print(users[0]); // first user item
-  // print(users.length); // length of users
+// List
+// List users = ["tommyC", "bobPy", "anthonyR"];
+// List <String> users = ["tommyC", "bobPy", "anthonyR"];
+// var users = ["tommyC", "bobPy", "anthonyR"];
+// print(users[0]); // first user item
+// print(users.length); // length of users
 
-  // for (String user in users) {
-  //   print("The user, $user has a character length of ${user.length}");
-  // }
-
-  // we can make the list object (data) unmodifiable by preceding it with a const
-  // List users = const ["tommyC", "bobPy", "anthonyR"];
-
-  // list1 = list2; are just a referencing so modifying one does the other
-  // var users2 = users;
-  // var users2 = [...users];  // to copy spread rather than assign
-  // for (String user in users2) {
-  //   print("The user, $user has a character length of ${user.length}");
-  // }
-
-  // print("##");
-
-  // users2[0] = "BenCpp";
-  // for (String user in users2) {
-  //   print("The user, $user has a character length of ${user.length}");
-  // }
-
-  // Set
-  // => think in python here
-  // var evenNumbers = {2, 4, 6, 6, 8, 10};
-  // print(evenNumbers);
-
-  // for an empty set we need to be careful using the empty
-  // {}, we should do, <type>{} rather
-  // var someSet = <int>{};
-  // Set <int> someSet = {}; // is the same as above
-  // print(someSet.runtimeType);
-
-  // someSet.add(0);
-  // someSet.addAll({4, 5, 67});
-
-  // print(someSet);
-
-  // Map
-  // => key:value pair. key can be any type
-
-  // var user = {
-  //   "username": "John Doe",
-  //   "age": 34,
-  //   "address": "29 Lincoln Street",
-  //   "salary": 450000
-  // };
-
-  // print(user);
-  // print(
-  //     "${user['username']} is ${user['age']} years old. Lives at ${user['address']} and earns ${user['salary']}");
-
-  // Map<int, String> indexedMap = {
-  //   1: "Your full name",
-  //   2: "Your date of birth",
-  //   3: "Your email",
-  //   4: "Residence address",
-  //   5: "Telephone"
-  // };
-
-  // print(indexedMap[1]);
-
-  // empty map
-  // var emptyMap = {};
-  // var emptyMap = Map();
-  // Map<String, String> emptyMap = Map();
-  // Map<String, String> emptyMap = {};
-  // emptyMap["empty"] = "";
+// for (String user in users) {
+//   print("The user, $user has a character length of ${user.length}");
 // }
 
+// we can make the list object (data) unmodifiable by preceding it with a const
+// List users = const ["tommyC", "bobPy", "anthonyR"];
+
+// list1 = list2; are just a referencing so modifying one does the other
+// var users2 = users;
+// var users2 = [...users];  // to copy spread rather than assign
+// for (String user in users2) {
+//   print("The user, $user has a character length of ${user.length}");
+// }
+
+// print("##");
+
+// users2[0] = "BenCpp";
+// for (String user in users2) {
+//   print("The user, $user has a character length of ${user.length}");
+// }
+
+// Set
+// => think in python here
+// var evenNumbers = {2, 4, 6, 6, 8, 10};
+// print(evenNumbers);
+
+// for an empty set we need to be careful using the empty
+// {}, we should do, <type>{} rather
+// var someSet = <int>{};
+// Set <int> someSet = {}; // is the same as above
+// print(someSet.runtimeType);
+
+// someSet.add(0);
+// someSet.addAll({4, 5, 67});
+
+// print(someSet);
+
+// Map
+// => key:value pair. key can be any type
+
+// var user = {
+//   "username": "John Doe",
+//   "age": 34,
+//   "address": "29 Lincoln Street",
+//   "salary": 450000
+// };
+
+// print(user);
+// print(
+//     "${user['username']} is ${user['age']} years old. Lives at ${user['address']} and earns ${user['salary']}");
+
+// Map<int, String> indexedMap = {
+//   1: "Your full name",
+//   2: "Your date of birth",
+//   3: "Your email",
+//   4: "Residence address",
+//   5: "Telephone"
+// };
+
+// print(indexedMap[1]);
+
+// empty map
+// var emptyMap = {};
+// var emptyMap = Map();
+// Map<String, String> emptyMap = Map();
+// Map<String, String> emptyMap = {};
+// emptyMap["empty"] = "";
+// }
 
 // function
+void main(List<String> args) {
+  // type name (parameter) { do something' return something; }
+  // type name (params) => something;
+
+  // named and positional params/args
+  /* // positional
+    type name (var a, var b) { 
+      do something' return something;
+    } 
+  */
+  // a is in the first position and b is in the next
+  // name(va, vb) => va->a, vb->b
+
+  /* // named
+    type name ({var a, var b}) { 
+      do something' return something;
+    } 
+  */
+  // even if a is in the first position and b is in the next
+  // the order doesn't matter. what is needed is the name
+  // name(a: va, b: bv) or name(b: vb, a: va)
+
+  // in case of named params, they are optional and it should just work
+  // fine if the name param is not provided. however it should be handle
+  // since that param might be used namedParam??SOME_DEFAULT_VALUE or
+  // just do the default assignment in the param definition
+  // type name ({var a=DEF_VAL_A, var b=DEF_VAL_B}){};
+}
+
 // class
 // exception handling
