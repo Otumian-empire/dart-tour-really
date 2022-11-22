@@ -244,28 +244,28 @@ import 'dart:io';
 // }
 
 // class
-void main(List<String> args) {
-  // use a class to defined a custom type (blue) for/of an object
-  /* var dog = Animal();
+// void main(List<String> args) {
+// use a class to defined a custom type (blue) for/of an object
+/* var dog = Animal();
   dog.age = 1;
   dog.name = "Blue";
   dog.printAnimal(); */
 
-  /* var dog = AnimalWithConstructor("Blue",1);
+/* var dog = AnimalWithConstructor("Blue",1);
   dog.printAnimal(); */
 
-  /* var dog = AnimalWithConstructorAndDefaultValue("Blue");
+/* var dog = AnimalWithConstructorAndDefaultValue("Blue");
   dog.printAnimal(); */
 
-  /* var dog = AnimalWithNamedConstructor.otherAnimal();
+/* var dog = AnimalWithNamedConstructor.otherAnimal();
   dog.printAnimal(); */
 
-  /* var mammal = Mammal("Derrick", 3000, true);
+/* var mammal = Mammal("Derrick", 3000, true);
   mammal.printAnimal();
 
   var doggo = Mammal("Frank Cake", 2, true);
   doggo.printAnimal(); */
-}
+// }
 /* 
 class Animal {
   String name;
@@ -354,3 +354,9 @@ class AnimalWithNamedConstructor {
 */
 
 // exception handling
+// void main(List<String> args) {
+  // exception handling to catch errors at run time
+  //  try {} catch (error) {} finally {}
+  //  try {} on ExceptionA catch(error)... {} catch (error) {} finally {}
+  // throw Exception(message);
+// }
